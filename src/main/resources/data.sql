@@ -13,17 +13,17 @@ INSERT INTO carro (modelo, ano, cor, cavalos_de_potencia, fabricante, pais) VALU
 ('Mustang', 2022, 'Amarelo', 450, 'Ford', 'EUA'),
 
 -- Fabricante 3 (Toyota)
-('Corolla', 2022, 'Branco', 160, 'Toyota', 'Japão'),
-('Camry', 2021, 'Azul', 250, 'Toyota', 'Japão'),
-('Hilux', 2020, 'Preto', 230, 'Toyota', 'Japão'),
-('Yaris', 2022, 'Prata', 140, 'Toyota', 'Japão'),
-('RAV4', 2021, 'Verde', 200, 'Toyota', 'Japão'),
+('Corolla', 2022, 'Branco', 160, 'Toyota', 'Japao'),
+('Camry', 2021, 'Azul', 250, 'Toyota', 'Japao'),
+('Hilux', 2020, 'Preto', 230, 'Toyota', 'Japao'),
+('Yaris', 2022, 'Prata', 140, 'Toyota', 'Japao'),
+('RAV4', 2021, 'Verde', 200, 'Toyota', 'Japao'),
 
 -- Fabricante 4 (Fiat)
-('Uno', 2020, 'Cinza', 75, 'Fiat', 'Itália'),
-('Palio', 2019, 'Branco', 85, 'Fiat', 'Itália'),
-('Toro', 2022, 'Vermelho', 180, 'Fiat', 'Itália'),
-('500', 2021, 'Amarelo', 100, 'Fiat', 'Itália'),
+('Uno', 2020, 'Cinza', 75, 'Fiat', 'Italia'),
+('Palio', 2019, 'Branco', 85, 'Fiat', 'Italia'),
+('Toro', 2022, 'Vermelho', 180, 'Fiat', 'Italia'),
+('500', 2021, 'Amarelo', 100, 'Fiat', 'Italia'),
 
 -- Fabricante 5 (BMW)
 ('X5', 2022, 'Preto', 330, 'BMW', 'Alemanha'),
@@ -32,10 +32,10 @@ INSERT INTO carro (modelo, ano, cor, cavalos_de_potencia, fabricante, pais) VALU
 ('330e', 2021, 'Azul', 250, 'BMW', 'Alemanha'),
 
 -- Fabricante 6 (Honda)
-('Civic', 2021, 'Prata', 180, 'Honda', 'Japão'),
-('CR-V', 2020, 'Branco', 220, 'Honda', 'Japão'),
-('HR-V', 2021, 'Azul', 180, 'Honda', 'Japão'),
-('Fit', 2020, 'Cinza', 130, 'Honda', 'Japão'),
+('Civic', 2021, 'Prata', 180, 'Honda', 'Japao'),
+('CR-V', 2020, 'Branco', 220, 'Honda', 'Japao'),
+('HR-V', 2021, 'Azul', 180, 'Honda', 'Japao'),
+('Fit', 2020, 'Cinza', 130, 'Honda', 'Japao'),
 
 -- Fabricante 7 (Chevrolet)
 ('Cruze', 2020, 'Preto', 160, 'Chevrolet', 'EUA'),
@@ -52,15 +52,15 @@ INSERT INTO carro (modelo, ano, cor, cavalos_de_potencia, fabricante, pais) VALU
 ('Kona', 2022, 'Azul', 200, 'Hyundai', 'Coreia do Sul'),
 
 -- Fabricante 9 (Renault)
-('Duster', 2020, 'Prata', 150, 'Renault', 'França'),
-('Sandero', 2021, 'Amarelo', 110, 'Renault', 'França'),
-('Kwid', 2021, 'Vermelho', 70, 'Renault', 'França'),
-('Captur', 2022, 'Branco', 170, 'Renault', 'França'),
+('Duster', 2020, 'Prata', 150, 'Renault', 'Franca'),
+('Sandero', 2021, 'Amarelo', 110, 'Renault', 'Franca'),
+('Kwid', 2021, 'Vermelho', 70, 'Renault', 'Franca'),
+('Captur', 2022, 'Branco', 170, 'Renault', 'Franca'),
 
 -- Fabricante 10 (Peugeot)
-('208', 2020, 'Preto', 130, 'Peugeot', 'França'),
-('3008', 2021, 'Cinza', 180, 'Peugeot', 'França'),
-('5008', 2021, 'Azul', 220, 'Peugeot', 'França'),
+('208', 2020, 'Preto', 130, 'Peugeot', 'Franca'),
+('3008', 2021, 'Cinza', 180, 'Peugeot', 'Franca'),
+('5008', 2021, 'Azul', 220, 'Peugeot', 'Franca'),
 
 -- Fabricante 11 (Mercedes-Benz)
 ('A-Class', 2021, 'Vermelho', 250, 'Mercedes-Benz', 'Alemanha'),
@@ -73,9 +73,9 @@ INSERT INTO carro (modelo, ano, cor, cavalos_de_potencia, fabricante, pais) VALU
 ('Q5', 2021, 'Azul', 280, 'Audi', 'Alemanha'),
 
 -- Fabricante 13 (Nissan)
-('Altima', 2020, 'Prata', 240, 'Nissan', 'Japão'),
-('Sentra', 2021, 'Vermelho', 180, 'Nissan', 'Japão'),
-('Rogue', 2022, 'Preto', 200, 'Nissan', 'Japão'),
+('Altima', 2020, 'Prata', 240, 'Nissan', 'Japao'),
+('Sentra', 2021, 'Vermelho', 180, 'Nissan', 'Japao'),
+('Rogue', 2022, 'Preto', 200, 'Nissan', 'Japao'),
 
 -- Fabricante 14 (Kia)
 ('Seltos', 2021, 'Amarelo', 180, 'Kia', 'Coreia do Sul'),
@@ -83,21 +83,21 @@ INSERT INTO carro (modelo, ano, cor, cavalos_de_potencia, fabricante, pais) VALU
 ('Soul', 2022, 'Vermelho', 150, 'Kia', 'Coreia do Sul'),
 
 -- Fabricante 15 (Mitsubishi)
-('Outlander', 2021, 'Azul', 200, 'Mitsubishi', 'Japão'),
-('L200', 2022, 'Preto', 230, 'Mitsubishi', 'Japão'),
-('ASX', 2021, 'Prata', 170, 'Mitsubishi', 'Japão'),
+('Outlander', 2021, 'Azul', 200, 'Mitsubishi', 'Japao'),
+('L200', 2022, 'Preto', 230, 'Mitsubishi', 'Japao'),
+('ASX', 2021, 'Prata', 170, 'Mitsubishi', 'Japao'),
 
 -- Fabricante 16 (Chrysler)
 ('Pacifica', 2021, 'Branco', 250, 'Chrysler', 'EUA'),
 ('Voyager', 2020, 'Preto', 240, 'Chrysler', 'EUA'),
 
 -- Fabricante 17 (Mazda)
-('CX-5', 2022, 'Vermelho', 220, 'Mazda', 'Japão'),
-('Mazda3', 2021, 'Cinza', 180, 'Mazda', 'Japão'),
+('CX-5', 2022, 'Vermelho', 220, 'Mazda', 'Japao'),
+('Mazda3', 2021, 'Cinza', 180, 'Mazda', 'Japao'),
 
 -- Fabricante 18 (Subaru)
-('Outback', 2020, 'Azul', 250, 'Subaru', 'Japão'),
-('Impreza', 2021, 'Preto', 170, 'Subaru', 'Japão'),
+('Outback', 2020, 'Azul', 250, 'Subaru', 'Japao'),
+('Impreza', 2021, 'Preto', 170, 'Subaru', 'Japao'),
 
 -- Fabricante 19 (Land Rover)
 ('Discovery', 2021, 'Branco', 300, 'Land Rover', 'Reino Unido'),
@@ -108,12 +108,12 @@ INSERT INTO carro (modelo, ano, cor, cavalos_de_potencia, fabricante, pais) VALU
 ('XE', 2021, 'Azul', 300, 'Jaguar', 'Reino Unido'),
 
 -- Fabricante 21 (Ferrari)
-('488', 2020, 'Vermelho', 600, 'Ferrari', 'Itália'),
-('Roma', 2021, 'Branco', 620, 'Ferrari', 'Itália'),
+('488', 2020, 'Vermelho', 600, 'Ferrari', 'Italia'),
+('Roma', 2021, 'Branco', 620, 'Ferrari', 'Italia'),
 
 -- Fabricante 22 (Lamborghini)
-('Huracan', 2021, 'Verde', 640, 'Lamborghini', 'Itália'),
-('Aventador', 2022, 'Preto', 700, 'Lamborghini', 'Itália'),
+('Huracan', 2021, 'Verde', 640, 'Lamborghini', 'Italia'),
+('Aventador', 2022, 'Preto', 700, 'Lamborghini', 'Italia'),
 
 -- Fabricante 23 (Porsche)
 ('911', 2021, 'Cinza', 500, 'Porsche', 'Alemanha'),
@@ -124,12 +124,12 @@ INSERT INTO carro (modelo, ano, cor, cavalos_de_potencia, fabricante, pais) VALU
 ('Model 3', 2021, 'Branco', 400, 'Tesla', 'EUA'),
 
 -- Fabricante 25 (Volvo)
-('XC90', 2021, 'Azul', 300, 'Volvo', 'Suécia'),
-('XC60', 2021, 'Cinza', 250, 'Volvo', 'Suécia'),
+('XC90', 2021, 'Azul', 300, 'Volvo', 'Suecia'),
+('XC60', 2021, 'Cinza', 250, 'Volvo', 'Suecia'),
 
 -- Fabricante 26 (Alfa Romeo)
-('Giulia', 2021, 'Vermelho', 280, 'Alfa Romeo', 'Itália'),
-('Stelvio', 2022, 'Preto', 320, 'Alfa Romeo', 'Itália'),
+('Giulia', 2021, 'Vermelho', 280, 'Alfa Romeo', 'Italia'),
+('Stelvio', 2022, 'Preto', 320, 'Alfa Romeo', 'Italia'),
 
 -- Fabricante 27 (Aston Martin)
 ('DB11', 2020, 'Verde', 500, 'Aston Martin', 'Reino Unido'),
@@ -146,6 +146,7 @@ INSERT INTO carro (modelo, ano, cor, cavalos_de_potencia, fabricante, pais) VALU
 -- Fabricante 30 (Mini)
 ('Cooper S', 2021, 'Vermelho', 190, 'Mini', 'Reino Unido'),
 ('Countryman', 2022, 'Preto', 220, 'Mini', 'Reino Unido');
+
 
 
 INSERT INTO usuario (nome, cargo, email, avatar, password) VALUES

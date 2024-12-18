@@ -20,4 +20,14 @@ public class UsuarioService {
     public List<Usuario> findAll() {
         return usuarioRepository.findAll();
     }
+
+    public Optional<Usuario> findById(Long id) {
+            Optional<Usuario> byId = usuarioRepository.findById(id);
+            if(byId.isPresent()){
+                Usuario usuario = byId.get();
+                usuario.setPassword(null);
+                return Optional.of(usuario);
+            }
+            return byId;
+        }
 }
