@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "example-id",
+    "_postman_id": "e1f4077b-4f25-4e8a-9c5a-60cc32baf88f",
     "name": "Carros API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
@@ -12,18 +12,30 @@
           "name": "GetSelfProfile",
           "request": {
             "method": "GET",
-            "url": "http://localhost:8080/api/usuarios/my-profile",
             "header": [
               {
                 "key": "User-Agent",
                 "value": "insomnia/10.2.0"
               }
             ],
-            "authentication": {
+            "url": {
+              "raw": "{{server_url}}/api/usuarios/my-profile",
+              "host": [
+                "{{server_url}}"
+              ],
+              "path": [
+                "api",
+                "usuarios",
+                "my-profile"
+              ]
+            },
+            "auth": {
               "type": "bearer",
-              "bearer": {
-                "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBQ01FLkNPTSIsInN1YiI6IjEiLCJleHAiOjE3MzUxMjgzMzUsImlhdCI6MTczNDUxMjczNSwiZW1haWwiOiJ3aWxlQGFjbWUuY29tIn0.HY-9VAqSo1o-P2ufez3YAow-OEUc2LjYGJCWCWQAbqQ5OFse8VvW__s6rkI03xnCnz2zcPiyujxV8p5kM8UQpg"
-              }
+              "bearer": [
+                {
+                  "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBQ01FLkNPTSIsInN1YiI6IjEiLCJleHAiOjE3MzUxMjgzMzUsImlhdCI6MTczNDUxMjczNSwiZW1haWwiOiJ3aWxlQGFjbWUuY29tIn0.HY-9VAqSo1o-P2ufez3YAow-OEUc2LjYGJCWCWQAbqQ5OFse8VvW__s6rkI03xnCnz2zcPiyujxV8p5kM8UQpg"
+                }
+              ]
             }
           }
         },
@@ -31,11 +43,6 @@
           "name": "Login",
           "request": {
             "method": "POST",
-            "url": "http://localhost:8080/api/usuarios/login",
-            "body": {
-              "mode": "raw",
-              "raw": "{\"email\": \"wile@acme.com\", \"password\": \"senha123\"}"
-            },
             "header": [
               {
                 "key": "Content-Type",
@@ -45,20 +52,44 @@
                 "key": "User-Agent",
                 "value": "insomnia/10.1.1"
               }
-            ]
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\": \"wile@acme.com\",\"password\": \"senha123\"}"
+            },
+            "url": {
+              "raw": "{{server_url}}/api/usuarios/login",
+              "host": [
+                "{{server_url}}"
+              ],
+              "path": [
+                "api",
+                "usuarios",
+                "login"
+              ]
+            }
           }
         },
         {
           "name": "GetAllUsuarios",
           "request": {
             "method": "GET",
-            "url": "http://localhost:8080/api/usuarios",
             "header": [
               {
                 "key": "User-Agent",
                 "value": "insomnia/10.1.1"
               }
-            ]
+            ],
+            "url": {
+              "raw": "{{server_url}}/api/usuarios",
+              "host": [
+                "{{server_url}}"
+              ],
+              "path": [
+                "api",
+                "usuarios"
+              ]
+            }
           }
         }
       ]
@@ -67,18 +98,9 @@
       "name": "Carros API",
       "item": [
         {
-          "name": "GetAllCarros",
+          "name": "export-csv",
           "request": {
             "method": "GET",
-            "url": "http://localhost:8080/api/carros",
-            "header": []
-          }
-        },
-        {
-          "name": "GetAllPaginados",
-          "request": {
-            "method": "GET",
-            "url": "http://localhost:8080/api/carros",
             "header": [
               {
                 "key": "User-Agent",
@@ -86,23 +108,14 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/carros?page=0&size=20",
+              "raw": "{{server_url}}/api/carros/export-cars",
               "host": [
-                "http://localhost:8080"
+                "{{server_url}}"
               ],
               "path": [
                 "api",
-                "carros"
-              ],
-              "query": [
-                {
-                  "key": "page",
-                  "value": "0"
-                },
-                {
-                  "key": "size",
-                  "value": "20"
-                }
+                "carros",
+                "export-cars"
               ]
             }
           }
@@ -111,7 +124,6 @@
           "name": "Search",
           "request": {
             "method": "GET",
-            "url": "http://localhost:8080/api/carros/search",
             "header": [
               {
                 "key": "User-Agent",
@@ -131,51 +143,181 @@
                 "value": "Volkswagen",
                 "disabled": true
               }
-            ]
+            ],
+            "url": {
+              "raw": "{{server_url}}/api/carros/search?pais=Franca&modelo=passat&fabricante=Volkswagen",
+              "host": [
+                "{{server_url}}"
+              ],
+              "path": [
+                "api",
+                "carros",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "pais",
+                  "value": "Franca"
+                },
+                {
+                  "key": "modelo",
+                  "value": "passat",
+                  "disabled": true
+                },
+                {
+                  "key": "fabricante",
+                  "value": "Volkswagen",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GetAllPaginados",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "User-Agent",
+                "value": "insomnia/10.2.0"
+              }
+            ],
+            "url": {
+              "raw": "{{server_url}}/api/carros?page=0&size=20",
+              "host": [
+                "{{server_url}}"
+              ],
+              "path": [
+                "api",
+                "carros"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "20"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obter Todos os Carros",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{server_url}}/api/carros",
+              "host": [
+                "{{server_url}}"
+              ],
+              "path": [
+                "api",
+                "carros"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obter Carro por ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{server_url}}/api/carros/1",
+              "host": [
+                "{{server_url}}"
+              ],
+              "path": [
+                "api",
+                "carros",
+                "1"
+              ]
+            }
           }
         },
         {
           "name": "Criar Novo Carro",
           "request": {
             "method": "POST",
-            "url": "http://localhost:8080/api/carros",
-            "body": {
-              "mode": "raw",
-              "raw": "{\"modelo\": \"Civic\", \"ano\": 2022, \"cor\": \"Prata\", \"cavalosDePotencia\": 180, \"fabricante\": \"Honda\", \"pais\": \"Japão\"}"
-            },
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
               }
-            ]
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"modelo\": \"Civic\",\"ano\": 2022,\"cor\": \"Prata\",\"cavalosDePotencia\": 180,\"fabricante\": \"Honda\",\"pais\": \"Japão\"}"
+            },
+            "url": {
+              "raw": "{{server_url}}/api/carros",
+              "host": [
+                "{{server_url}}"
+              ],
+              "path": [
+                "api",
+                "carros"
+              ]
+            }
           }
         },
         {
           "name": "Atualizar Carro por ID",
           "request": {
             "method": "PUT",
-            "url": "http://localhost:8080/api/carros/1",
-            "body": {
-              "mode": "raw",
-              "raw": "{\"modelo\": \"Civic\", \"ano\": 2023, \"cor\": \"Preto\", \"cavalosDePotencia\": 200, \"fabricante\": \"Honda\", \"pais\": \"Japão\"}"
-            },
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
               }
-            ]
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"modelo\": \"Civic\",\"ano\": 2023,\"cor\": \"Preto\",\"cavalosDePotencia\": 200,\"fabricante\": \"Honda\",\"pais\": \"Japão\"}"
+            },
+            "url": {
+              "raw": "{{server_url}}/api/carros/1",
+              "host": [
+                "{{server_url}}"
+              ],
+              "path": [
+                "api",
+                "carros",
+                "1"
+              ]
+            }
           }
         },
         {
           "name": "Deletar Carro por ID",
           "request": {
             "method": "DELETE",
-            "url": "http://localhost:8080/api/carros/1"
+            "url": {
+              "raw": "{{server_url}}/api/carros/1",
+              "host": [
+                "{{server_url}}"
+              ],
+              "path": [
+                "api",
+                "carros",
+                "1"
+              ]
+            }
           }
         }
       ]
     }
-  ]
+  ],
+  "environment": {
+    "name": "Base Environment",
+    "values": [
+      {
+        "key": "server_url",
+        "value": "http://localhost:8080"
+      }
+    ]
+  }
 }
