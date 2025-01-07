@@ -19,7 +19,7 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 @RestController  @RequestMapping("/api/carros")
-@RequiredArgsConstructor  @CrossOrigin(origins = "*",allowedHeaders = "*",exposedHeaders = "*")
+@RequiredArgsConstructor  @CrossOrigin(origins = "*",allowedHeaders = "*",exposedHeaders = "*") //Adicionado CORE Headers
 public class CarroController {
     private static final Logger logger = Logger.getLogger(CarroController.class.getName());
     private final CarroService carroService;
