@@ -6,6 +6,7 @@ import com.acme.cars.payload.CriteriaRequest;
 import com.acme.cars.service.CarroService;
 import com.acme.cars.service.CsvService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -15,10 +16,12 @@ import org.springframework.web.bind.annotation.*;
 import java.io.File;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 @RestController  @RequestMapping("/api/carros")
-@RequiredArgsConstructor  @CrossOrigin(origins = "*")
+@RequiredArgsConstructor  @CrossOrigin(origins = "*",allowedHeaders = "*",exposedHeaders = "*")
 public class CarroController {
+    private static final Logger logger = Logger.getLogger(CarroController.class.getName());
     private final CarroService carroService;
     private final CsvService csvService;
 
@@ -36,10 +39,11 @@ public class CarroController {
     @GetMapping
     public ResponseEntity<List<Carro>> listarTodos(@RequestHeader(value = "page", defaultValue = "0") String page,
                                                    @RequestHeader(value = "size", defaultValue = "10") String size) {
+        logger.info("CARRO CONTAGEM: {}"+ carroService.count());
         HttpHeaders headers = new HttpHeaders();
         headers.add("X-Total-Count", String.valueOf(carroService.count()));
         List<Carro> allCarros = carroService.getAllPaginado(Integer.parseInt(page), Integer.parseInt(size));
-        return ResponseEntity.ok(allCarros);
+        return new ResponseEntity<>(allCarros, headers, HttpStatus.OK);
     }
     @GetMapping("/{id}")
     public ResponseEntity<Carro> buscarPorId(@PathVariable Long id) {
